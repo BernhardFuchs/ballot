@@ -2,24 +2,34 @@ pragma solidity >=0.4.21 <0.6.0;
 
 contract Ballot {
 
-  struct Proposal {
-    uint id;
-    string name;
-    uint voteCount;
-  }
+    struct Voter {
+        uint weight;
+        bool voted;
+        uint8 vote;
+        address delegate;
+    }
+    struct Proposal {
+        uint id;
+        string settingsHash;
+        uint voteCount;
+    }
 
-  // Fetch Proposals
-  mapping(uint => Proposal) public proposals;
-  // Store Proposals count
-  uint public proposalsCount;
+    address admin;
+    mapping(address => Voter) voters;
+    // Fetch Proposals
+    mapping(uint => Proposal) public proposals;
+    // Store Proposals count
+    uint public proposalsCount;
 
-  constructor() public {
-    addProposal("Proposal 1");
-    addProposal("Proposal 2");
-  }
+    constructor(string memory _proposalHash) public {
+        admin = msg.sender;
+        voters[admin].weight = 1;
+        // add proposal for proposalHash
+        // proposals.add()
+    }
 
-  function addProposal (string memory _proposal) private {
-    proposalsCount ++;
-    proposals[proposalsCount] = Proposal(proposalsCount, _proposal, 0);
-  }
+    function addProposal (string memory _proposal) private {
+        proposalsCount ++;
+        proposals[proposalsCount] = Proposal(proposalsCount, _proposal, 0);
+    }
 }
