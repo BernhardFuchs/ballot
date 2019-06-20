@@ -2,3 +2,6 @@
 
 # server app distribution files
 /dist
+
+# tmp folder for random stuff
+/tmp

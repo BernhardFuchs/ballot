@@ -1377,12 +1377,12 @@
     "666": {
       "events": {},
       "links": {},
-      "address": "0xD554DF9c47ea0bD1037cA65aC23C0298E27152CF",
-      "transactionHash": "0x0c78068bd0cee72b1c22f57402b2a1b3a2c41ac24a95b75fb486fa101b7a9be9"
+      "address": "0xb888AC316B67455cD8215b0e5885164712E8640b",
+      "transactionHash": "0xe2659a8ff1e74a3038811dbbee0b8fbb62766f27b5308c00914a237fc96280e0"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-06-20T09:22:37.685Z",
+  "updatedAt": "2019-06-20T10:16:21.433Z",
   "devdoc": {
     "methods": {}
   },
