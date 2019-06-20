@@ -1,0 +1,360 @@
+{
+  "contractName": "Ballot",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proposal",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"proposal\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/berfuc/workspace/playground/dlt-apps/ballot/contracts/Ballot.sol\":\"Ballot\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/berfuc/workspace/playground/dlt-apps/ballot/contracts/Ballot.sol\":{\"keccak256\":\"0xf6c7b10ae6ac48d1f5b410fefc3e1c6fbbd92903332bf3d5673edafedd0a2e1a\",\"urls\":[\"bzzr://488695e95f0c6e4f284262fadd3d4f246bb3de9848377dd9b8f51c1045036aff\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040518060400160405280600a81526020017f50726f706f73616c2031000000000000000000000000000000000000000000008152506000908051906020019061005c929190610062565b50610107565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a357805160ff19168380011785556100d1565b828001600101855582156100d1579182015b828111156100d05782518255916020019190600101906100b5565b5b5090506100de91906100e2565b5090565b61010491905b808211156101005760008160009055506001016100e8565b5090565b90565b61017d806101166000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063753ec10314610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101495780601f1061011e57610100808354040283529160200191610149565b820191906000526020600020905b81548152906001019060200180831161012c57829003601f168201915b50505050508156fea165627a7a723058200118da76c14b6a077468441d5693beed7e5940728a2a8cd912aac71464d49faf0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063753ec10314610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101495780601f1061011e57610100808354040283529160200191610149565b820191906000526020600020905b81548152906001019060200180831161012c57829003601f168201915b50505050508156fea165627a7a723058200118da76c14b6a077468441d5693beed7e5940728a2a8cd912aac71464d49faf0029",
+  "sourceMap": "34:105:0:-;;;82:55;8:9:-1;5:2;;;30:1;27;20:12;5:2;82:55:0;109:23;;;;;;;;;;;;;;;;;:8;:23;;;;;;;;;;;;:::i;:::-;;34:105;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "34:105:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:105:0;;;;;;;;;;;;;;;;;;;55:22;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;55:22:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.21 <0.6.0;\n\ncontract Ballot {\n\n  string public proposal;\n\n  constructor() public {\n    proposal = \"Proposal 1\";\n  }\n}",
+  "sourcePath": "/Users/berfuc/workspace/playground/dlt-apps/ballot/contracts/Ballot.sol",
+  "ast": {
+    "absolutePath": "/Users/berfuc/workspace/playground/dlt-apps/ballot/contracts/Ballot.sol",
+    "exportedSymbols": {
+      "Ballot": [
+        12
+      ]
+    },
+    "id": 13,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 12,
+        "linearizedBaseContracts": [
+          12
+        ],
+        "name": "Ballot",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3,
+            "name": "proposal",
+            "nodeType": "VariableDeclaration",
+            "scope": 12,
+            "src": "55:22:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "55:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10,
+              "nodeType": "Block",
+              "src": "103:34:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 8,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6,
+                      "name": "proposal",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "109:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "50726f706f73616c2031",
+                      "id": 7,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "120:12:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_cae63af291104a7caf205c70107b704a54cf0cffb87602c6066f6451e972fc31",
+                        "typeString": "literal_string \"Proposal 1\""
+                      },
+                      "value": "Proposal 1"
+                    },
+                    "src": "109:23:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 9,
+                  "nodeType": "ExpressionStatement",
+                  "src": "109:23:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 11,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "93:2:0"
+            },
+            "returnParameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "103:0:0"
+            },
+            "scope": 12,
+            "src": "82:55:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 13,
+        "src": "34:105:0"
+      }
+    ],
+    "src": "0:139:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/berfuc/workspace/playground/dlt-apps/ballot/contracts/Ballot.sol",
+    "exportedSymbols": {
+      "Ballot": [
+        12
+      ]
+    },
+    "id": 13,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 12,
+        "linearizedBaseContracts": [
+          12
+        ],
+        "name": "Ballot",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3,
+            "name": "proposal",
+            "nodeType": "VariableDeclaration",
+            "scope": 12,
+            "src": "55:22:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "55:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10,
+              "nodeType": "Block",
+              "src": "103:34:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 8,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6,
+                      "name": "proposal",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "109:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "50726f706f73616c2031",
+                      "id": 7,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "120:12:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_cae63af291104a7caf205c70107b704a54cf0cffb87602c6066f6451e972fc31",
+                        "typeString": "literal_string \"Proposal 1\""
+                      },
+                      "value": "Proposal 1"
+                    },
+                    "src": "109:23:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 9,
+                  "nodeType": "ExpressionStatement",
+                  "src": "109:23:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 11,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "93:2:0"
+            },
+            "returnParameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "103:0:0"
+            },
+            "scope": 12,
+            "src": "82:55:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 13,
+        "src": "34:105:0"
+      }
+    ],
+    "src": "0:139:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {
+    "666": {
+      "events": {},
+      "links": {},
+      "address": "0x10af038b31858dd4dcc5B1bB5523d0a1c20245B5",
+      "transactionHash": "0xde9036b1834aa27a4a8ee99f86ddc5c0bec4f38d556f6bdd124d771b914e4c60"
+    }
+  },
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-06-20T09:22:37.683Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
