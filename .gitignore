@@ -5,3 +5,6 @@
 
 # tmp folder for random stuff
 /tmp
+
+# confidential folder for keys, secrets, etc
+/confidential
