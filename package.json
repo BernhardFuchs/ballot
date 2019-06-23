@@ -1,24 +1,37 @@
 {
-  "name": "node-dapp-seed",
+  "name": "ballot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Decentralized application for running a ballot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BernhardFuchs/ballot.git"
+  },
   "scripts": {
     "serve": "node dist/server.js",
     "start": "npm run build && npm run serve",
     "build": "rm -rf dist/* && tsc",
+    "generate": "truffle compile && typechain --target truffle './build/**/*.json'",
     "solhint": "./node_modules/solhint/solhint.js 'contracts/**/*.sol' || true",
     "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "truffle": "^4.1.14"
+  },
   "devDependencies": {
+    "@types/bignumber.js": "^5.0.0",
     "@types/jest": "^24.0.15",
-    "@types/node": "^12.0.8",
+    "@types/node": "^12.0.10",
     "husky": "^2.4.1",
     "jest": "^24.8.0",
     "solhint": "^2.1.0",
     "ts-jest": "^24.0.2",
+    "truffle-typings": "^1.0.8",
+    "ts-generator": "^0.0.8",
+    "ts-node": "^8.3.0",
+    "typechain": "^0.3.17",
     "typescript": "^3.5.2"
   },
   "husky": {
