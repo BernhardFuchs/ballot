@@ -23,8 +23,12 @@
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
+// require("ts-node/register");
 
 module.exports = {
+  // this is required by truffle to find any ts test files
+  // test_file_extension_regexp: /.*\.ts$/,
+
   /**
    * Networks define how you connect to your ethereum client and let you set the
    * defaults web3 uses to send transactions. If you don't specify one truffle
