@@ -1,4 +1,5 @@
 pragma solidity >=0.4.22 <0.6.0;
+
 contract Ballot {
 
     struct Voter {
@@ -6,35 +7,39 @@ contract Ballot {
         bool voted;
         bool accepted;
     }
+
     struct Proposal {
         bytes32 settingHash;
         uint voteCount;
     }
 
-    address chairperson;
+    address serverAdmin;
     bytes32 currentSettingHash;
+    bytes32 serverNameHash;
     mapping(address => Voter) voters;
     Proposal[2] proposals;
-    
-    constructor (bytes32 _settingHash) public {
-        chairperson = msg.sender;
-        voters[chairperson].weight = 1;
-        currentSettingHash = _settingHash;
+
+    constructor (bytes32 _serverNameHash, bytes32 _initSettingHash) public {
+        serverAdmin = msg.sender;
+        voters[serverAdmin].weight = 1;
+        serverNameHash = _serverNameHash;
+        currentSettingHash = _initSettingHash;
     }
-    
+
     function addProposal(bytes32 _settingHash) public {
-        if (msg.sender != chairperson) return;
+        isServerAdmin();
         proposals[0].settingHash = currentSettingHash;
         proposals[1].settingHash = _settingHash;
     }
-    
+
     /// Give $(toVoter) the right to vote on this ballot.
-    /// May only be called by $(chairperson).
+    /// May only be called by $(serverAdmin).
     function giveRightToVote(address toVoter) public {
-        if (msg.sender != chairperson || voters[toVoter].voted) return;
+        isServerAdmin();
+        require(!voters[toVoter].voted, "The voter already voted.");
         voters[toVoter].weight = 1;
     }
-    
+
     /// Accept new server setting $(accepted).
     function acceptSettingChange(bool accepted) public {
         Voter storage sender = voters[msg.sender];
@@ -44,12 +49,13 @@ contract Ballot {
         if(accepted) proposals[1].voteCount += sender.weight;
         else proposals[0].voteCount += sender.weight;
     }
-    
-    /// Returns 255 as Error Code if not the contract owner
+
     /// Returns 0 if server changes are not accepted
     /// Returns 1 if server changes are accepted
+    /// If server changes are accepted the currentSettingHash
+    /// is replaced with the changes
     function closeBallot() public returns (uint8 _winningProposal) {
-        if (msg.sender != chairperson) return 255;
+        isServerAdmin();
         uint256 winningVoteCount = 0;
         for (uint8 prop = 0; prop < proposals.length; prop++) {
             if (proposals[prop].voteCount > winningVoteCount) {
@@ -58,6 +64,10 @@ contract Ballot {
             }
         }
         if (_winningProposal == 1) currentSettingHash = proposals[1].settingHash;
+    }
+
+    function isServerAdmin() private view returns (bool) {
+        require(msg.sender == serverAdmin, "Invalid permissions");
     }
 
 }
