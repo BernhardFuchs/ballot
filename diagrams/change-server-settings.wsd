@@ -1,0 +1,18 @@
+@startuml
+!include ballot-styles.wsd
+
+title Change Server Settings Request
+header Ballot by developer.bernifox@gmail.com
+
+actor Citizen
+participant "Decentralized App" as Dapp
+participant "Smart Contract" as SC
+actor Mayor
+
+Citizen -> Dapp: submit new Settings
+Dapp -> SC: init new ballot
+activate SC
+Mayor --> SC: close ballot
+return ballot result
+Dapp <- Citizen: report result
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+!include ballot-styles.wsd
+title Init a new Server
+header Ballot by developer.bernifox@gmail.com
+
+actor "Mayor"
+participant "Decentralized App" as Dapp
+participant "Smart Contract" as SC
+database "Database" as DB
+
+Mayor -> Dapp: create Server
+Dapp -> SC: create Smart Contract
+Dapp<- SC: confirm successful creation
+Dapp -> DB: create new Server entry
+Mayor <- Dapp: confirm successful creation
+
+@enduml

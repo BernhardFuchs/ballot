@@ -1,0 +1,5 @@
+@startuml Styles for Ballot diagrams
+
+skinparam Handwritten true
+
+@enduml
